@@ -1,0 +1,145 @@
+/* Hangman drawing */
+.hangmanDrawing {
+    position: relative;
+}
+
+.base {
+    height: 10px;
+    width: 250px;
+    background-color: black;
+}
+
+.div2 {
+    height: 250px;
+    width: 10px;
+    background-color: black;
+    margin-left: 140px;
+}
+
+.div3 {
+    height: 10px;
+    width: 200px;
+    background-color: black;
+    margin-left: 140px;
+}
+
+.div4 {
+    height: 50px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.head {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 10px solid black;
+    position:absolute;
+    top: 50px;
+    right: -30px;
+}
+
+.body {
+    width: 10px;
+    height: 80px;
+    background-color: black;
+    position:absolute;
+    top: 120px;
+    right: 0px;
+}
+
+.right_arm {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position:absolute;
+    top: 150px;
+    right: -100px;
+    rotate: -30deg;
+    transform-origin: left bottom;
+}
+
+.left_arm {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position:absolute;
+    top: 150px;
+    right: 10px;
+    rotate: 30deg;
+    transform-origin: right bottom;
+}
+
+.right_leg {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position:absolute;
+    top: 190px;
+    right: -90px;
+    rotate: 60deg;
+    transform-origin: left bottom;
+}
+
+.left_leg {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position:absolute;
+    top: 190px;
+    right: 0;
+    rotate: -60deg;
+    transform-origin: right bottom;
+}
+
+/* Hangman test word */
+.testWord {
+    display: flex;
+    gap: 0.25rem;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.testWordCharacters {
+    border-bottom: 0.1em solid black;
+}
+
+/* Keyboard */
+.keyboard {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 0.5rem;
+}
+
+.btn {
+    width: 100%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1/1;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.btn.active {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+}
+
+.btn.inactive {
+    opacity: 0.3;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: hsl(200, 100%, 75%);
+}
